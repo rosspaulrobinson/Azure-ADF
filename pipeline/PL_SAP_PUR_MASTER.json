@@ -1,0 +1,46 @@
+{
+	"name": "PL_SAP_PUR_MASTER",
+	"properties": {
+		"activities": [
+			{
+				"name": "AC_CHECK_DB_LOCK_DESTINATION",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[USP_CHECK_ACTIVE_INSIGHTS_DB_LOCK]",
+					"storedProcedureParameters": {
+						"out_message": {
+							"value": "",
+							"type": "String"
+						},
+						"par_debug_messages": {
+							"value": "",
+							"type": "Boolean"
+						},
+						"par_lock_type": {
+							"value": "EXCLUSIVE - PARTIAL",
+							"type": "String"
+						},
+						"par_movement_name": {
+							"value": "",
+							"type": "String"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "LS_SQLDB_LEARN_OWNER",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": []
+	}
+}
