@@ -126,7 +126,7 @@
 		"variables": {
 			"SOURCE_NAME": {
 				"type": "String",
-				"defaultValue": "SAP_PUR_ME"
+				"defaultValue": "SAP_PUR"
 			}
 		},
 		"annotations": []
