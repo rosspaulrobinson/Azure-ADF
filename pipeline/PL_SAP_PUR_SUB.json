@@ -240,13 +240,10 @@
 									"type": "AzureSqlSink"
 								},
 								"enableStaging": false,
+								"enableSkipIncompatibleRow": true,
 								"translator": {
-									"type": "TabularTranslator",
-									"typeConversion": true,
-									"typeConversionSettings": {
-										"allowDataTruncation": true,
-										"treatBooleanAsNumber": false
-									}
+									"value": "@json(string(activity('Retrieve columns of table').output.firstRow.Columns))",
+									"type": "Expression"
 								}
 							},
 							"inputs": [
@@ -261,7 +258,13 @@
 							"outputs": [
 								{
 									"referenceName": "DS_SQLDB_LEARN_SINK",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"cw_tables": {
+											"value": "@item().TableName",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
