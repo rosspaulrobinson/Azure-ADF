@@ -267,6 +267,83 @@
 									}
 								}
 							]
+						},
+						{
+							"name": "Log Successful Table Copy",
+							"type": "SqlServerStoredProcedure",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "7.00:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"storedProcedureName": "[insights_batch].[usp_Upsert_CTLBatch_DataLoadRegister]",
+								"storedProcedureParameters": {
+									"DataMovementID": {
+										"value": {
+											"value": "@pipeline().parameters.DATA_MOVEMENT_ID",
+											"type": "Expression"
+										},
+										"type": "Guid"
+									},
+									"dataRead": {
+										"value": "",
+										"type": "Int64"
+									},
+									"dataWritten": {
+										"value": "",
+										"type": "Int64"
+									},
+									"IsProcessed": {
+										"value": "",
+										"type": "Boolean"
+									},
+									"ItemName": {
+										"value": "",
+										"type": "String"
+									},
+									"Message": {
+										"value": "",
+										"type": "String"
+									},
+									"rowsCURDel": {
+										"value": "",
+										"type": "Int64"
+									},
+									"rowsCURIns": {
+										"value": "",
+										"type": "Int64"
+									},
+									"rowsCURUpd": {
+										"value": "",
+										"type": "Int64"
+									},
+									"rowsRAWMerged": {
+										"value": "",
+										"type": "Int64"
+									},
+									"rowsRead": {
+										"value": "",
+										"type": "Int64"
+									},
+									"rowsWritten": {
+										"value": "",
+										"type": "Int64"
+									},
+									"Source": {
+										"value": "",
+										"type": "String"
+									}
+								}
+							},
+							"linkedServiceName": {
+								"referenceName": "LS_SQLDB_LEARN_OWNER",
+								"type": "LinkedServiceReference"
+							}
 						}
 					]
 				}
