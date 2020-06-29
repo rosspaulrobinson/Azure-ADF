@@ -323,7 +323,7 @@
 										"type": "String"
 									},
 									"Message": {
-										"value": "",
+										"value": null,
 										"type": "String"
 									},
 									"rowsCURDel": {
