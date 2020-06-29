@@ -42,6 +42,29 @@
 					"referenceName": "LS_SQLDB_LEARN_OWNER",
 					"type": "LinkedServiceReference"
 				}
+			},
+			{
+				"name": "Process PL_PUR_SUB",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "AC_CHECK_DB_LOCK_DESTINATION",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "PL_SAP_PUR_SUB",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true,
+					"parameters": {
+						"DATA_MOVEMENT_ID": "@variables('DATA_MOVEMENT_ID')"
+					}
+				}
 			}
 		],
 		"variables": {
