@@ -136,7 +136,7 @@
 					},
 					"activities": [
 						{
-							"name": "Lookup Columns",
+							"name": "Retrieve columns of table",
 							"type": "Lookup",
 							"dependsOn": [],
 							"policy": {
@@ -169,12 +169,12 @@
 							}
 						},
 						{
-							"name": "Truncate Table",
+							"name": "Truncate curated table",
 							"description": "Truncate the table in the curated schema before loading new data, e.g. [dlcur].[sap.ecc.ekko].",
 							"type": "SqlServerStoredProcedure",
 							"dependsOn": [
 								{
-									"activity": "Lookup Columns",
+									"activity": "Retrieve columns of table",
 									"dependencyConditions": [
 										"Succeeded"
 									]
