@@ -1,0 +1,21 @@
+{
+	"name": "DS_SQLDB_LEARN_SOURCE",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SQLDB_LEARN_OWNER",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"cw_tables": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dlraw",
+			"table": "@dataset().cw_tables"
+		}
+	}
+}
