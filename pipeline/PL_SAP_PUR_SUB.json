@@ -15,12 +15,78 @@
 					"secureInput": false
 				},
 				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[insights_batch].[usp_Insert_CTLBatch_ExecutionInstance]",
+					"storedProcedureParameters": {
+						"DataFactoryName": {
+							"value": {
+								"value": "@pipeline().DataFactory",
+								"type": "Expression"
+							},
+							"type": "String"
+						},
+						"DataMovementID": {
+							"value": {
+								"value": "@pipeline().RunId",
+								"type": "Expression"
+							},
+							"type": "Guid"
+						},
+						"PipelineName": {
+							"value": {
+								"value": "@pipeline().Pipeline",
+								"type": "Expression"
+							},
+							"type": "String"
+						},
+						"PipelineRunID": {
+							"value": {
+								"value": "@pipeline().RunId",
+								"type": "Expression"
+							},
+							"type": "Guid"
+						},
+						"PipelineTriggerName": {
+							"value": {
+								"value": "@pipeline().TriggerId",
+								"type": "Expression"
+							},
+							"type": "String"
+						},
+						"PipelineTriggerStartTime": {
+							"value": {
+								"value": "@pipeline().TriggerTime",
+								"type": "Expression"
+							},
+							"type": "DateTime"
+						},
+						"PipelineTriggerType": {
+							"value": {
+								"value": "@pipeline().TriggerType",
+								"type": "Expression"
+							},
+							"type": "String"
+						}
+					}
+				},
 				"linkedServiceName": {
 					"referenceName": "LS_SQLDB_LEARN_OWNER",
 					"type": "LinkedServiceReference"
 				}
 			}
 		],
+		"parameters": {
+			"DATA_MOVEMENT_ID": {
+				"type": "string",
+				"defaultValue": "fab11111-08cd-4119-906f-e36c10227a1d"
+			}
+		},
+		"variables": {
+			"SOURCE_NAME": {
+				"type": "String",
+				"defaultValue": "SAP_PUR_ME"
+			}
+		},
 		"annotations": []
 	}
 }
