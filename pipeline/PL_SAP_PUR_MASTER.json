@@ -22,7 +22,10 @@
 							"type": "String"
 						},
 						"par_debug_messages": {
-							"value": "",
+							"value": {
+								"value": "@variables('var_debug_messages')",
+								"type": "Expression"
+							},
 							"type": "Boolean"
 						},
 						"par_lock_type": {
