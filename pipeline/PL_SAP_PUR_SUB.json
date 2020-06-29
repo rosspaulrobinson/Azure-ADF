@@ -211,6 +211,59 @@
 								"referenceName": "LS_SQLDB_LEARN_OWNER",
 								"type": "LinkedServiceReference"
 							}
+						},
+						{
+							"name": "Copy Raw to Curated",
+							"type": "Copy",
+							"dependsOn": [
+								{
+									"activity": "Truncate curated table",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"policy": {
+								"timeout": "7.00:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"source": {
+									"type": "AzureSqlSource",
+									"queryTimeout": "02:00:00"
+								},
+								"sink": {
+									"type": "AzureSqlSink"
+								},
+								"enableStaging": false,
+								"translator": {
+									"type": "TabularTranslator",
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
+								}
+							},
+							"inputs": [
+								{
+									"referenceName": "DS_SQLDB_LEARN_SOURCE",
+									"type": "DatasetReference",
+									"parameters": {
+										"cw_tables": "item().TableName"
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "DS_SQLDB_LEARN_SINK",
+									"type": "DatasetReference"
+								}
+							]
 						}
 					]
 				}

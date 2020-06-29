@@ -1,0 +1,24 @@
+{
+	"name": "DS_SQLDB_LEARN_SINK",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SQLDB_LEARN_OWNER",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"cw_tables": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dlcur",
+			"table": {
+				"value": "@dataset().cw_tables",
+				"type": "Expression"
+			}
+		}
+	}
+}
