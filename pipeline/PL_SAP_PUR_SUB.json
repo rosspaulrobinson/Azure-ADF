@@ -167,6 +167,50 @@
 									"type": "DatasetReference"
 								}
 							}
+						},
+						{
+							"name": "Truncate Table",
+							"description": "Truncate the table in the curated schema before loading new data, e.g. [dlcur].[sap.ecc.ekko].",
+							"type": "SqlServerStoredProcedure",
+							"dependsOn": [
+								{
+									"activity": "Lookup Columns",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"policy": {
+								"timeout": "7.00:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"storedProcedureName": "[insights_batch].[usp_truncate_table]",
+								"storedProcedureParameters": {
+									"SourceName": {
+										"value": {
+											"value": "@variables('SOURCE_NAME')",
+											"type": "Expression"
+										},
+										"type": "String"
+									},
+									"TableName": {
+										"value": {
+											"value": "item().TableName",
+											"type": "Expression"
+										},
+										"type": "String"
+									}
+								}
+							},
+							"linkedServiceName": {
+								"referenceName": "LS_SQLDB_LEARN_OWNER",
+								"type": "LinkedServiceReference"
+							}
 						}
 					]
 				}
