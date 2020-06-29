@@ -369,6 +369,108 @@
 								"referenceName": "LS_SQLDB_LEARN_OWNER",
 								"type": "LinkedServiceReference"
 							}
+						},
+						{
+							"name": "Log Failed Table Copy",
+							"type": "SqlServerStoredProcedure",
+							"dependsOn": [
+								{
+									"activity": "Copy Raw to Curated",
+									"dependencyConditions": [
+										"Failed"
+									]
+								}
+							],
+							"policy": {
+								"timeout": "7.00:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"storedProcedureName": "[insights_batch].[usp_Upsert_CTLBatch_DataLoadRegister]",
+								"storedProcedureParameters": {
+									"DataMovementID": {
+										"value": {
+											"value": "@pipeline().parameters.DATA_MOVEMENT_ID",
+											"type": "Expression"
+										},
+										"type": "Guid"
+									},
+									"dataRead": {
+										"value": {
+											"value": "@activity('Copy Raw to Curated').output.dataRead",
+											"type": "Expression"
+										},
+										"type": "Int64"
+									},
+									"dataWritten": {
+										"value": {
+											"value": "@activity('Copy Raw to Curated').output.dataWritten",
+											"type": "Expression"
+										},
+										"type": "Int64"
+									},
+									"IsProcessed": {
+										"value": "false",
+										"type": "Boolean"
+									},
+									"ItemName": {
+										"value": {
+											"value": "@item().TableName",
+											"type": "Expression"
+										},
+										"type": "String"
+									},
+									"Message": {
+										"value": null,
+										"type": "String"
+									},
+									"rowsCURDel": {
+										"value": null,
+										"type": "Int64"
+									},
+									"rowsCURIns": {
+										"value": null,
+										"type": "Int64"
+									},
+									"rowsCURUpd": {
+										"value": null,
+										"type": "Int64"
+									},
+									"rowsRAWMerged": {
+										"value": null,
+										"type": "Int64"
+									},
+									"rowsRead": {
+										"value": {
+											"value": "@activity('Copy Raw to Curated').output.rowsRead",
+											"type": "Expression"
+										},
+										"type": "Int64"
+									},
+									"rowsWritten": {
+										"value": {
+											"value": "@activity('Copy Raw to Curated').output.rowsCopied",
+											"type": "Expression"
+										},
+										"type": "Int64"
+									},
+									"Source": {
+										"value": {
+											"value": "@variables('SOURCE_NAME')",
+											"type": "Expression"
+										},
+										"type": "String"
+									}
+								}
+							},
+							"linkedServiceName": {
+								"referenceName": "LS_SQLDB_LEARN_OWNER",
+								"type": "LinkedServiceReference"
+							}
 						}
 					]
 				}
