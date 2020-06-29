@@ -41,6 +41,45 @@
 				}
 			}
 		],
+		"variables": {
+			"var_debug_messages": {
+				"type": "String"
+			},
+			"DATA_MOVEMENT_ID": {
+				"type": "String"
+			},
+			"var_Archive_Location": {
+				"type": "String"
+			},
+			"var_destination_type": {
+				"type": "String",
+				"defaultValue": "DATABASE"
+			},
+			"var_insights_layer": {
+				"type": "String",
+				"defaultValue": "CONSUMPTION"
+			},
+			"var_Movement_Type": {
+				"type": "String",
+				"defaultValue": "PIPELINE"
+			},
+			"var_Solution_Name": {
+				"type": "String",
+				"defaultValue": "LEARN"
+			},
+			"var_Source_Type": {
+				"type": "String",
+				"defaultValue": "DATABASE"
+			},
+			"var_Destination_Name": {
+				"type": "String",
+				"defaultValue": "shared-concepts"
+			},
+			"var_Source_Name": {
+				"type": "String",
+				"defaultValue": "ingest-sapshared"
+			}
+		},
 		"annotations": []
 	}
 }
