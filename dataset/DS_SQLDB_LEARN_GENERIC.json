@@ -1,0 +1,12 @@
+{
+	"name": "DS_SQLDB_LEARN_GENERIC",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SQLDB_LEARN_OWNER",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
