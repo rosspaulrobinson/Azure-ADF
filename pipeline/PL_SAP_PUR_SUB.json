@@ -97,12 +97,23 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
+						"sqlReaderStoredProcedureName": "[insights_batch].[usp_select_source_table]",
+						"storedProcedureParameters": {
+							"SourceName": {
+								"type": "String",
+								"value": {
+									"value": "@variables('SOURCE_NAME')",
+									"type": "Expression"
+								}
+							}
+						},
 						"queryTimeout": "02:00:00"
 					},
 					"dataset": {
 						"referenceName": "DS_SQLDB_LEARN_GENERIC",
 						"type": "DatasetReference"
-					}
+					},
+					"firstRowOnly": false
 				}
 			}
 		],
