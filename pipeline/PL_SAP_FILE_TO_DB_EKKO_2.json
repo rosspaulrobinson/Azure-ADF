@@ -29,7 +29,7 @@
 					},
 					"sink": {
 						"type": "AzureSqlSink",
-						"sqlWriterStoredProcedureName": "[dbo].[spOverwriteEkko]",
+						"sqlWriterStoredProcedureName": "[dbo].[spTransformEkko]",
 						"sqlWriterTableType": "EkkoTypeIn",
 						"storedProcedureTableTypeParameterName": "EkkoDataIn",
 						"disableMetricsCollection": false
