@@ -1,6 +1,7 @@
 {
 	"name": "PL_SAP_FILE_TO_DB_EKKO_2",
 	"properties": {
+		"description": "Copy to Curated table using stored procedure.",
 		"activities": [
 			{
 				"name": "Copy EKKO CSV file to DB",
