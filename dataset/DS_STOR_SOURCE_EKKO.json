@@ -14,8 +14,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "TEC_EKPO_2020_001.csv",
-				"folderPath": "SAP/ECC/TEC",
+				"fileName": "TEC_EKKO_2020_001.csv",
+				"folderPath": "SAP/ECC/TEC/EKKO",
 				"container": "dls-private"
 			},
 			"columnDelimiter": ",",
