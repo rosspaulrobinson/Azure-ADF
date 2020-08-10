@@ -85,6 +85,54 @@
 									"type": "String",
 									"physicalType": "varchar"
 								}
+							},
+							{
+								"source": {
+									"name": "BSAKZ",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "BSAKZ",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "LOEKZ",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "LOEKZ",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "STATU",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "STATU",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "AEDAT",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AEDAT",
+									"type": "String",
+									"physicalType": "varchar"
+								}
 							}
 						],
 						"typeConversion": true,
