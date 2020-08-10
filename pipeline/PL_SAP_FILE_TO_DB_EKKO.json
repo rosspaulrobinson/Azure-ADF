@@ -30,8 +30,8 @@
 						"type": "AzureSqlSink",
 						"preCopyScript": "truncate table [dlimp].[sap.ecc.EKKO]",
 						"sqlWriterStoredProcedureName": "[dbo].[spOverwriteEkko]",
-						"sqlWriterTableType": "EkkoType",
-						"storedProcedureTableTypeParameterName": "EkkoData",
+						"sqlWriterTableType": "EkkoTypeIn",
+						"storedProcedureTableTypeParameterName": "EkkoDataIn",
 						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
