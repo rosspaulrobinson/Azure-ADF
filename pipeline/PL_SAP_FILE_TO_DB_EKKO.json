@@ -28,6 +28,7 @@
 					},
 					"sink": {
 						"type": "AzureSqlSink",
+						"preCopyScript": "truncate table [dlraw].[sap.ecc.EKKO]",
 						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
