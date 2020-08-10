@@ -5,6 +5,9 @@
 			"referenceName": "LS_SQLDB_LEARN_OWNER",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "Static"
+		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [

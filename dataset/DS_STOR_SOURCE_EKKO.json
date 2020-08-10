@@ -1,6 +1,7 @@
 {
-	"name": "DS_STOR_LEARN_SOURCE_EKKO",
+	"name": "DS_STOR_SOURCE_EKKO",
 	"properties": {
+		"description": "CSV file",
 		"linkedServiceName": {
 			"referenceName": "LS_STOR_LEARN_OWNER",
 			"type": "LinkedServiceReference"
