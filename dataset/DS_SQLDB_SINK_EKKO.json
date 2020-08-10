@@ -42,7 +42,7 @@
 			},
 			{
 				"name": "AEDAT",
-				"type": "date"
+				"type": "varchar"
 			},
 			{
 				"name": "ERNAM",
@@ -126,31 +126,31 @@
 			},
 			{
 				"name": "BEDAT",
-				"type": "date"
+				"type": "varchar"
 			},
 			{
 				"name": "KDATB",
-				"type": "date"
+				"type": "varchar"
 			},
 			{
 				"name": "KDATE",
-				"type": "date"
+				"type": "varchar"
 			},
 			{
 				"name": "BWBDT",
-				"type": "date"
+				"type": "varchar"
 			},
 			{
 				"name": "ANGDT",
-				"type": "date"
+				"type": "varchar"
 			},
 			{
 				"name": "BNDDT",
-				"type": "date"
+				"type": "varchar"
 			},
 			{
 				"name": "GWLDT",
-				"type": "date"
+				"type": "varchar"
 			},
 			{
 				"name": "AUSNR",
@@ -162,7 +162,7 @@
 			},
 			{
 				"name": "IHRAN",
-				"type": "date"
+				"type": "varchar"
 			},
 			{
 				"name": "IHREZ",
@@ -376,7 +376,7 @@
 			},
 			{
 				"name": "DPDAT",
-				"type": "date"
+				"type": "varchar"
 			},
 			{
 				"name": "MSR_ID",
@@ -400,7 +400,7 @@
 			},
 			{
 				"name": "RELEASE_DATE",
-				"type": "date"
+				"type": "varchar"
 			},
 			{
 				"name": "EXTERNALSYSTEM",
@@ -434,7 +434,7 @@
 			},
 			{
 				"name": "EQ_EINDT",
-				"type": "date"
+				"type": "varchar"
 			},
 			{
 				"name": "EQ_WERKS",
@@ -550,7 +550,7 @@
 			}
 		],
 		"typeProperties": {
-			"schema": "dlraw",
+			"schema": "dlimp",
 			"table": "sap.ecc.EKKO"
 		}
 	}
