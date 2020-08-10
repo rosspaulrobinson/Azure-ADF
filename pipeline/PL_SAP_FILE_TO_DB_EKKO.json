@@ -32,11 +32,6 @@
 						"sqlWriterStoredProcedureName": "[dbo].[spOverwriteEkko]",
 						"sqlWriterTableType": "EkkoType",
 						"storedProcedureTableTypeParameterName": "EkkoData",
-						"storedProcedureParameters": {
-							"category": {
-								"type": "String"
-							}
-						},
 						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
