@@ -68,6 +68,54 @@
 									"type": "String",
 									"physicalType": "char"
 								}
+							},
+							{
+								"source": {
+									"name": "BSART",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "BSART",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "BSAKZ",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "BSAKZ",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "LOEKZ",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "LOEKZ",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "STATU",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "STATU",
+									"type": "String",
+									"physicalType": "char"
+								}
 							}
 						],
 						"typeConversion": true,
@@ -79,13 +127,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DS_STOR_LEARN_SOURCE_EKKO",
+						"referenceName": "DS_STOR_SOURCE_EKKO",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DS_SQLDB_LEARN_SINK_EKKO",
+						"referenceName": "DS_SQLDB_SINK_EKKO",
 						"type": "DatasetReference"
 					}
 				]
