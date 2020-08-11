@@ -92,6 +92,12 @@
 				}
 			}
 		],
+		"variables": {
+			"v_JsonMapping": {
+				"type": "String",
+				"defaultValue": "{\"type\": \"TabularTranslator\",\"mappings\": [{\"source\": {\"name\": \"EBELN\"},\"sink\": {\"name\": \"EBELN\"}}]}"
+			}
+		},
 		"folder": {
 			"name": "Dynamic"
 		},
