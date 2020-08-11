@@ -74,7 +74,8 @@
 						"sqlReaderStoredProcedureName": "[insights_batch].[TableSchema2JSON_sap-shared]",
 						"storedProcedureParameters": {
 							"TableName": {
-								"type": "String"
+								"type": "String",
+								"value": "sap.ecc.ekko"
 							}
 						},
 						"queryTimeout": "02:00:00",
