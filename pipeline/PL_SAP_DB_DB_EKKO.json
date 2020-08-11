@@ -43,7 +43,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"cw_schema": "dlimp",
-							"cw_table": "ecc.sap.EKKO"
+							"cw_table": "sap.ecc.EKKO"
 						}
 					}
 				],
@@ -53,7 +53,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"cw_schema": "dlimp",
-							"cw_table": "ecc.sap.EKKO2"
+							"cw_table": "sap.ecc.EKKO2"
 						}
 					}
 				]
