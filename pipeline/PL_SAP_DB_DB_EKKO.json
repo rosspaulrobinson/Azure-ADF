@@ -29,7 +29,9 @@
 						"partitionOption": "None"
 					},
 					"sink": {
-						"type": "AzureSqlSink"
+						"type": "AzureSqlSink",
+						"preCopyScript": "truncate table [dlimp].[sap.ecc.EKKO2]",
+						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
 					"translator": {
