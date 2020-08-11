@@ -1,0 +1,100 @@
+{
+	"name": "PL_SAP_DB_DB_EKKO_1",
+	"properties": {
+		"description": "Copy between tables.",
+		"activities": [
+			{
+				"name": "Copy data",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "Lookup Columns",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"preCopyScript": "truncate table [dlimp].[sap.ecc.EKKO2]",
+						"disableMetricsCollection": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"value": "@json(string(activity('Lookup Columns').output.firstRow.Columns))",
+						"type": "Expression"
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DS_SQLDB_SOURCE",
+						"type": "DatasetReference",
+						"parameters": {
+							"cw_schema": "dlimp",
+							"cw_table": "sap.ecc.EKKO"
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DS_SQLDB_SINK",
+						"type": "DatasetReference",
+						"parameters": {
+							"cw_schema": "dlimp",
+							"cw_table": "sap.ecc.EKKO2"
+						}
+					}
+				]
+			},
+			{
+				"name": "Lookup Columns",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderStoredProcedureName": "[insights_batch].[TableSchema2JSON_sap-shared]",
+						"storedProcedureParameters": {
+							"TableName": {
+								"type": "String",
+								"value": "sap.ecc.ekko"
+							}
+						},
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"dataset": {
+						"referenceName": "DS_SQLDB_LEARN_GENERIC",
+						"type": "DatasetReference"
+					}
+				}
+			}
+		],
+		"folder": {
+			"name": "Dynamic"
+		},
+		"annotations": []
+	}
+}
