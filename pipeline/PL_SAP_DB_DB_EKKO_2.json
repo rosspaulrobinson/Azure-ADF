@@ -35,7 +35,7 @@
 					},
 					"enableStaging": false,
 					"translator": {
-						"value": "@json(concat(string(variables('v_prefix')),string(variables('v_JsonMapping')),string(variables('v_prefix'))))",
+						"value": "@json(string(activity('Lookup Columns').output.firstRow.Columns2))",
 						"type": "Expression"
 					}
 				},
