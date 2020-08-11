@@ -35,7 +35,7 @@
 					},
 					"enableStaging": false,
 					"translator": {
-						"value": "concat(variables('v_prefix'))",
+						"value": "@json(concat(variables('v_prefix')))",
 						"type": "Expression"
 					}
 				},
