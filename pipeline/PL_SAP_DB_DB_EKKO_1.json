@@ -40,7 +40,7 @@
 					},
 					"enableStaging": false,
 					"translator": {
-						"value": "@json(variables('v_JsonMapping'))",
+						"value": "@json(string(variables('v_JsonMapping')))",
 						"type": "Expression"
 					}
 				},
