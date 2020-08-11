@@ -96,6 +96,12 @@
 			"v_JsonMapping": {
 				"type": "String",
 				"defaultValue": "{\"type\": \"TabularTranslator\",\"mappings\": [{\"source\": {\"name\": \"EBELN\"},\"sink\": {\"name\": \"EBELN\"}}]}"
+			},
+			"v_prefix": {
+				"type": "String"
+			},
+			"v_suffix": {
+				"type": "String"
 			}
 		},
 		"folder": {
