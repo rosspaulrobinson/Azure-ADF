@@ -20,9 +20,12 @@
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
-			"schema": "dlcur",
+			"schema": {
+				"value": "@dataset().cw_schema",
+				"type": "Expression"
+			},
 			"table": {
-				"value": "@dataset().cw_tables",
+				"value": "@dataset().cw_table",
 				"type": "Expression"
 			}
 		}
