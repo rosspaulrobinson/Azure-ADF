@@ -21,7 +21,12 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [],
+				"userProperties": [
+					{
+						"name": "JsonMapping",
+						"value": "{\"type\":\"TabularTranslator\",\"mappings\":[{\"source\":{\"name\":\"EBELN\"},\"sink\":{\"name\":\"EBELN\"}}}"
+					}
+				],
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
