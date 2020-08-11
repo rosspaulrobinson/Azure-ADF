@@ -6,7 +6,10 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"cw_tables": {
+			"cw_schema": {
+				"type": "string"
+			},
+			"cw_table": {
 				"type": "string"
 			}
 		},
