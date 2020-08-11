@@ -95,7 +95,7 @@
 		"variables": {
 			"v_JsonMapping": {
 				"type": "String",
-				"defaultValue": "{\"type\": \"TabularTranslator\",\"mappings\": [{\"source\": {\"name\": \"EBELN\"},\"sink\": {\"name\": \"EBELN\"}}]}"
+				"defaultValue": "[{\"ColumnName\":\"ebeln\",\"type\":\"String\"}]"
 			},
 			"v_prefix": {
 				"type": "String",
