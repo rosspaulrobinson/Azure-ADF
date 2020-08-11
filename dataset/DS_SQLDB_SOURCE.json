@@ -6,7 +6,10 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"cw_tables": {
+			"cw_schema": {
+				"type": "string"
+			},
+			"cw_table": {
 				"type": "string"
 			}
 		},
@@ -17,9 +20,12 @@
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
-			"schema": "dlraw",
+			"schema": {
+				"value": "@dataset().cw_schema",
+				"type": "Expression"
+			},
 			"table": {
-				"value": "@dataset().cw_tables",
+				"value": "@dataset().cw_table",
 				"type": "Expression"
 			}
 		}
