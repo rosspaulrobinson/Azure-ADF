@@ -99,7 +99,7 @@
 			},
 			"v_prefix": {
 				"type": "String",
-				"defaultValue": "\"type\": \"TabularTranslator\", \"mappings\": "
+				"defaultValue": "{\"type\": \"TabularTranslator\", \"mappings\": "
 			},
 			"v_suffix": {
 				"type": "String",
