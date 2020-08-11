@@ -35,7 +35,7 @@
 					},
 					"enableStaging": false,
 					"translator": {
-						"value": "@variables('v_JsonMapping')",
+						"value": "@json(concat(variables('v_prefix'),String(activity('Lookup Columns').output),variables('v_suffix')))",
 						"type": "Expression"
 					}
 				},
@@ -98,10 +98,12 @@
 				"defaultValue": "{\"type\": \"TabularTranslator\",\"mappings\": [{\"source\": {\"name\": \"EBELN\"},\"sink\": {\"name\": \"EBELN\"}}]}"
 			},
 			"v_prefix": {
-				"type": "String"
+				"type": "String",
+				"defaultValue": "\"type\": \"TabularTranslator\", \"mappings\": "
 			},
 			"v_suffix": {
-				"type": "String"
+				"type": "String",
+				"defaultValue": "}"
 			}
 		},
 		"folder": {
