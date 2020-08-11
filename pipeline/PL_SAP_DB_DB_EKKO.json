@@ -42,7 +42,8 @@
 						"referenceName": "DS_SQLDB_SOURCE",
 						"type": "DatasetReference",
 						"parameters": {
-							"cw_tables": "dlimp.ecc.sap.EKKO"
+							"cw_schema": "dlimp",
+							"cw_table": "ecc.sap.EKKO"
 						}
 					}
 				],
@@ -51,7 +52,8 @@
 						"referenceName": "DS_SQLDB_SINK",
 						"type": "DatasetReference",
 						"parameters": {
-							"cw_tables": "dlimp.ecc.sap.EKKO2"
+							"cw_schema": "dlimp",
+							"cw_table": "ecc.sap.EKKO2"
 						}
 					}
 				]
