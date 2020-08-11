@@ -35,7 +35,7 @@
 					},
 					"enableStaging": false,
 					"translator": {
-						"value": "@json(string(activity('Lookup Columns').output.firstRow.Columns2))",
+						"value": "@json(string(activity('Lookup Columns').output.firstRow.Columns))",
 						"type": "Expression"
 					}
 				},
