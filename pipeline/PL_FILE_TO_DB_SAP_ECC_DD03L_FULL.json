@@ -1,0 +1,428 @@
+{
+	"name": "PL_FILE_TO_DB_SAP_ECC_DD03L_FULL",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"preCopyScript": "TRUNCATE TABLE [dlimp].[sap.ecc.DD03L]",
+						"disableMetricsCollection": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "TABNAME",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TABNAME",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "FIELDNAME",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "FIELDNAME",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "AS4LOCAL",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AS4LOCAL",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "AS4VERS",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AS4VERS",
+									"type": "Decimal",
+									"physicalType": "decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "POSITION",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "POSITION",
+									"type": "Decimal",
+									"physicalType": "decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "KEYFLAG",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "KEYFLAG",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "MANDATORY",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "MANDATORY",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "ROLLNAME",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ROLLNAME",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CHECKTABLE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CHECKTABLE",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADMINFIELD",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADMINFIELD",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "INTTYPE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "INTTYPE",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "INTLEN",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "INTLEN",
+									"type": "Decimal",
+									"physicalType": "decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "REFTABLE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "REFTABLE",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "PRECFIELD",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "PRECFIELD",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "REFFIELD",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "REFFIELD",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CONROUT",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CONROUT",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "NOTNULL",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "NOTNULL",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "DATATYPE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DATATYPE",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "LENG",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "LENG",
+									"type": "Decimal",
+									"physicalType": "decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "DECIMALS",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DECIMALS",
+									"type": "Decimal",
+									"physicalType": "decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "DOMNAME",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DOMNAME",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "SHLPORIGIN",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "SHLPORIGIN",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "TABLETYPE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TABLETYPE",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "DEPTH",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DEPTH",
+									"type": "Decimal",
+									"physicalType": "decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "COMPTYPE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "COMPTYPE",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "REFTYPE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "REFTYPE",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "LANGUFLAG",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "LANGUFLAG",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "DBPOSITION",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DBPOSITION",
+									"type": "Decimal",
+									"physicalType": "decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "ANONYMOUS",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ANONYMOUS",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "OUTPUTSTYLE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "OUTPUTSTYLE",
+									"type": "Decimal",
+									"physicalType": "decimal"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DS_STOR_SOURCE_DD03L",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DS_SQLDB_SINK",
+						"type": "DatasetReference",
+						"parameters": {
+							"cw_schema": "dlimp",
+							"cw_table": "sap.ecc.DD03L"
+						}
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "Static"
+		},
+		"annotations": []
+	}
+}
