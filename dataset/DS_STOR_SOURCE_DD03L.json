@@ -1,0 +1,65 @@
+{
+	"name": "DS_STOR_SOURCE_DD03L",
+	"properties": {
+		"description": "CSV file",
+		"linkedServiceName": {
+			"referenceName": "LS_STOR_LEARN_OWNER",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Static"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "TEC_EKKO_2020_001 - Test_3.csv",
+				"folderPath": "SAP/ECC/TEC/DD03L",
+				"container": "dls-private"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "MANDT",
+				"type": "String"
+			},
+			{
+				"name": "EBELN",
+				"type": "String"
+			},
+			{
+				"name": "BUKRS",
+				"type": "String"
+			},
+			{
+				"name": "BSTYP",
+				"type": "String"
+			},
+			{
+				"name": "BSART",
+				"type": "String"
+			},
+			{
+				"name": "BSAKZ",
+				"type": "String"
+			},
+			{
+				"name": "LOEKZ",
+				"type": "String"
+			},
+			{
+				"name": "STATU",
+				"type": "String"
+			},
+			{
+				"name": "AEDAT",
+				"type": "String"
+			}
+		]
+	}
+}
