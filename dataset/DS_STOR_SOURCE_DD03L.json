@@ -14,7 +14,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "TEC_EKKO_2020_001 - Test_3.csv",
+				"fileName": "TEC_DD03L_ALL_029.csv",
 				"folderPath": "SAP/ECC/TEC/DD03L",
 				"container": "dls-private"
 			},
@@ -25,39 +25,123 @@
 		},
 		"schema": [
 			{
-				"name": "MANDT",
+				"name": "TABNAME",
 				"type": "String"
 			},
 			{
-				"name": "EBELN",
+				"name": "FIELDNAME",
 				"type": "String"
 			},
 			{
-				"name": "BUKRS",
+				"name": "AS4LOCAL",
 				"type": "String"
 			},
 			{
-				"name": "BSTYP",
+				"name": "AS4VERS",
 				"type": "String"
 			},
 			{
-				"name": "BSART",
+				"name": "POSITION",
 				"type": "String"
 			},
 			{
-				"name": "BSAKZ",
+				"name": "KEYFLAG",
 				"type": "String"
 			},
 			{
-				"name": "LOEKZ",
+				"name": "MANDATORY",
 				"type": "String"
 			},
 			{
-				"name": "STATU",
+				"name": "ROLLNAME",
 				"type": "String"
 			},
 			{
-				"name": "AEDAT",
+				"name": "CHECKTABLE",
+				"type": "String"
+			},
+			{
+				"name": "ADMINFIELD",
+				"type": "String"
+			},
+			{
+				"name": "INTTYPE",
+				"type": "String"
+			},
+			{
+				"name": "INTLEN",
+				"type": "String"
+			},
+			{
+				"name": "REFTABLE",
+				"type": "String"
+			},
+			{
+				"name": "PRECFIELD",
+				"type": "String"
+			},
+			{
+				"name": "REFFIELD",
+				"type": "String"
+			},
+			{
+				"name": "CONROUT",
+				"type": "String"
+			},
+			{
+				"name": "NOTNULL",
+				"type": "String"
+			},
+			{
+				"name": "DATATYPE",
+				"type": "String"
+			},
+			{
+				"name": "LENG",
+				"type": "String"
+			},
+			{
+				"name": "DECIMALS",
+				"type": "String"
+			},
+			{
+				"name": "DOMNAME",
+				"type": "String"
+			},
+			{
+				"name": "SHLPORIGIN",
+				"type": "String"
+			},
+			{
+				"name": "TABLETYPE",
+				"type": "String"
+			},
+			{
+				"name": "DEPTH",
+				"type": "String"
+			},
+			{
+				"name": "COMPTYPE",
+				"type": "String"
+			},
+			{
+				"name": "REFTYPE",
+				"type": "String"
+			},
+			{
+				"name": "LANGUFLAG",
+				"type": "String"
+			},
+			{
+				"name": "DBPOSITION",
+				"type": "String"
+			},
+			{
+				"name": "ANONYMOUS",
+				"type": "String"
+			},
+			{
+				"name": "OUTPUTSTYLE",
 				"type": "String"
 			}
 		]
