@@ -28,8 +28,8 @@
 					"sink": {
 						"type": "AzureSqlSink",
 						"sqlWriterStoredProcedureName": "[dbo].[spTransformDd03l]",
-						"sqlWriterTableType": "Dd03lTypeIn",
-						"storedProcedureTableTypeParameterName": "Dd03lDataIn"
+						"sqlWriterTableType": "DD03L.TablType",
+						"storedProcedureTableTypeParameterName": "DataIn"
 					},
 					"enableStaging": false,
 					"translator": {
