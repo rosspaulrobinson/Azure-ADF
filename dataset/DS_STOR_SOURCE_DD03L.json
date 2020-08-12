@@ -14,8 +14,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "TEC_DD03L_ALL_072.csv",
-				"folderPath": "SAP/ECC/TEC/DD03L/MARA",
+				"fileName": "TEC_DD03L_ALL_066.csv",
+				"folderPath": "SAP/ECC/TEC/DD03L/MAKT",
 				"container": "dls-private"
 			},
 			"columnDelimiter": ",",
