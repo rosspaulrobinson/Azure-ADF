@@ -1,0 +1,16 @@
+{
+	"name": "SqlServerExpressEdition",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=False;data source=192.168.1.71;initial catalog=DWConfiguration;user id=sa",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJkMzY2ZWYxZC1kMjc0LTRlYjgtOWQ0My03NDA3ZThjZWNiM2QiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "SQLServerExpressEdition",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
