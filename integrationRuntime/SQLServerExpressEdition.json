@@ -1,0 +1,6 @@
+{
+	"name": "SQLServerExpressEdition",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
