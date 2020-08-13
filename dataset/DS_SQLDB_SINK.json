@@ -14,7 +14,7 @@
 			}
 		},
 		"folder": {
-			"name": "Dynamic"
+			"name": "Azure/Dynamic"
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
