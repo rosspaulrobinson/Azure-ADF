@@ -5,8 +5,8 @@
 		"annotations": [],
 		"type": "SqlServer",
 		"typeProperties": {
-			"connectionString": "integrated security=False;data source=192.168.1.71;initial catalog=DWConfiguration;user id=sa",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJkMzY2ZWYxZC1kMjc0LTRlYjgtOWQ0My03NDA3ZThjZWNiM2QiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"connectionString": "integrated security=False;data source=192.168.1.71;initial catalog=learn;user id=sa",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJmNDhjY2RjMi1kOTAwLTRlOTktOWYwZC0zM2IxMzBjMWJjMTciLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "SQLServerExpressEdition",
