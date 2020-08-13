@@ -7,7 +7,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "Static"
+			"name": "Azure/Static"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
